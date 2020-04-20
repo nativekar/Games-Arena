@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types";
 import { Card } from "semantic-ui-react";
 
 const Games = ({ gamesList }) => (
@@ -16,6 +17,13 @@ const Games = ({ gamesList }) => (
       <a href={gamesList.url}>URL</a>
     </Card.Content>
   </Card>
-);
+);~~
+Games.propTypes = {
+  gamesList: propTypes.arrayOf(propTypes.shape),
+};
+
+Games.defaultProps = {
+  gamesList: [],
+};
 
 export default Games;

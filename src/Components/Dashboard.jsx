@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Grid } from "semantic-ui-react";
 import Games from "./Games";
-import SortDropdown from "./SortDropdown";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -43,10 +42,7 @@ class Dashboard extends Component {
     }
     return (
       <div>
-        <Grid>
-          <SortDropdown />
-          {segmenetedGamesArray}
-        </Grid>
+        <Grid>{segmenetedGamesArray}</Grid>
       </div>
     );
   }
